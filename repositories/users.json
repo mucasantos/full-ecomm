@@ -1,1 +1,14 @@
-[{"nome":"Joao","email":"joaoa@email.com","id":"f349bb90"}]
+[
+    {
+        "nome": "Joao",
+        "email": "joaoa@email.com",
+        "id": "f349bb90"
+    },
+    {
+        "nome": "Maria Cicera",
+        "email": "maria@email.com",
+        "id": "6336e00c",
+        "age": 56,
+        "nasc": 1943
+    }
+]

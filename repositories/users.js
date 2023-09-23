@@ -42,6 +42,31 @@ class UserRepository {
     await this.writeAll(records);
   }
 
+  async getOne(id) {
+    //lista de todos os usuários (array)
+    const records = await this.getAll();
+    const searchUser = records.find((record) => record.id === id);
+    console.log(searchUser);
+    return searchUser;
+  }
+
+  async delete(id) {
+    const records = await this.getAll();
+    const updatedList = records.filter((record) => record.id !== id);
+    await this.writeAll(updatedList);
+  }
+
+  async update(id, atributos) {
+    //Pegar todos
+    const records = await this.getAll();
+    //Buscar o elemento por id = Aqui eu pego a REFERENCIA do objeto no array
+    const toUpdate = records.find((record) => record.id === id);
+    //faz o update do ojeto que eu quero
+    Object.assign(toUpdate, atributos);
+
+    await this.writeAll(records);
+  }
+
   async writeAll(records) {
     await fs.promises.writeFile(this.filename, JSON.stringify(records));
   }
@@ -55,9 +80,11 @@ class UserRepository {
 
 const test = async () => {
   const repo = new UserRepository("users.json");
-  await repo.create({ nome: "Joao", email: "joaoa@email.com" });
-  const users = await repo.getAll();
-  console.log(users);
+  //await repo.create({ nome: "Maria", email: "maria@email.com" });
+  //const users = await repo.getAll();
+  //console.log(users);
+
+  repo.update("6336e00c", { age: 56, nome: "Maria Cicera", nasc: 1943 });
 };
 
 test();
