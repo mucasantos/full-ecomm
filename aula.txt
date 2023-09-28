@@ -1,7 +1,3 @@
-Async / await
-Métodos para arrays
-Escrever em arquivos
-
 Modelando os dados
 Usuários
 Produtos
@@ -13,4 +9,15 @@ o código de acesso a dados em um local centralizado, reduzindo assim a duplica�
 e melhorando a capacidade de manutenção do código.
 (https://dev.to/thanasismpalatsoukas/repository-pattern-with-javascript-4nl) 
 
-Logica de Sign-up
+28 e 29 de Setembro
+
+* Lógica getOneBy ( Javascript in/of)
+* Exportando a classe para reutilização
+* Herança em Javascript
+* Logica de Sign-up
+    -> Lógica com os if/filtro
+    -> Login com cookie (testar com o site: https://3.basecamp.com/)
+        Fluxo com o nodejs
+    -> Grande problema de segurança! => senhas salvas em texto comum...
+        Adicionando Salt ao Hashing
+* Implementando a autenticação com hashing e Salt
