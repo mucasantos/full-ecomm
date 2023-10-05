@@ -11,9 +11,17 @@ e melhorando a capacidade de manutenção do código.
 
 28 e 29 de Setembro
 
+Exercicios lógica/arrays
+
+05 e 06 / outubro
+
 * Lógica getOneBy ( Javascript in/of)
 * Exportando a classe para reutilização
 * Herança em Javascript
+* Templates MVC
+
+19 e 20 de outubro
+
 * Logica de Sign-up
     -> Lógica com os if/filtro
     -> Login com cookie (testar com o site: https://3.basecamp.com/)
@@ -21,3 +29,7 @@ e melhorando a capacidade de manutenção do código.
     -> Grande problema de segurança! => senhas salvas em texto comum...
         Adicionando Salt ao Hashing
 * Implementando a autenticação com hashing e Salt
+
+26 e 27 de outubro
+
+* Validator (express)
