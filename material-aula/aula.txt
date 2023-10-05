@@ -11,6 +11,17 @@ e melhorando a capacidade de manutenção do código.
 
 28 e 29 de Setembro
 
+Exercícios lógica/Arrays
+
+05 e 06 de outubro
+
+validator
+templates html
+products repository
+extends
+
+19 e 20 de outubro
+
 Exercicios lógica/arrays
 
 05 e 06 / outubro
@@ -29,7 +40,3 @@ Exercicios lógica/arrays
     -> Grande problema de segurança! => senhas salvas em texto comum...
         Adicionando Salt ao Hashing
 * Implementando a autenticação com hashing e Salt
-
-26 e 27 de outubro
-
-* Validator (express)
