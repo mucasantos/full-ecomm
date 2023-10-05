@@ -39,6 +39,8 @@ constructor(filename) {
   }
 
   async create(atributos) {
+
+    console.log(atributos)
     //adicionar o id ao atributo recebido
     atributos.id = this.randomId();
     //Ler o meu arquivo

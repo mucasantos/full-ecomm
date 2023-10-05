@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth/auth");
 
+const userRepo = require("./repositories/users");
+
 //user o body parser em um middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
