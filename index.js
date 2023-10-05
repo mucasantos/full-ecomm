@@ -2,10 +2,15 @@ const express =require('express')
 const app = express()
 const bodyParser  = require('body-parser')
 
+const userRepo = require('./repositories/users')
+const prodRepo = require('./repositories/products')
+
 //user o body parser em um middleware
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', (req,res)=>{
+
+  prodRepo.
     res.send(`
     <div>
     <form method="POST">
