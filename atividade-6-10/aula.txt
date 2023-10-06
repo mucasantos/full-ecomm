@@ -6,7 +6,7 @@ para iniciar a atividade!
 https://github.com/mucasantos/full-ecomm
 
 git checkout -b "seunome"
-Os arquivos necessários estão na pasta atividade-6-10
+Os arquivos necessários estão na pasta atividade-6-1 0
 
 1. Criar as rotas de Produtos:
     /products => irá mostrar todos os produtos
