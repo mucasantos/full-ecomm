@@ -1,14 +1,20 @@
 [
-    {
-        "email": "sam@email.com",
-        "password": "gjhjkghdsk",
-        "passwordConfirmation": "gdjkgjdlskfj",
-        "id": "e9925d2f"
-    },
-    {
-        "email": "maria@email.com",
-        "password": "maria",
-        "passwordConfirmation": "maria",
-        "id": "001b3a83"
-    }
+  {
+    "email": "sam@email.com",
+    "password": "gjhjkghdsk",
+    "passwordConfirmation": "gdjkgjdlskfj",
+    "id": "e9925d2f"
+  },
+  {
+    "email": "maria@email.com",
+    "password": "maria",
+    "passwordConfirmation": "maria",
+    "id": "001b3a83"
+  },
+  {
+    "email": "guilhermesampaio768@gmail.com",
+    "password": "123",
+    "passwordConfirmation": "123",
+    "id": "a52220d3"
+  }
 ]
