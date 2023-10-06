@@ -1,35 +1,26 @@
 const layout = require('../layout');
-const { getError } = require('../../helpers');
 
-module.exports = ({ req, errors }) => {
+module.exports = () => {
   return layout({
     content: `
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-one-quarter">
             <form method="POST">
-              <h1 class="title">Sign Up</h1>
+              <h1 class="title">Sign in</h1>
               <div class="field">
                 <label class="label">Email</label>
                 <input required class="input" placeholder="Email" name="email" />
-                <p class="help is-danger">${getError(errors, 'email')}</p>
+                <p class="help is-danger"></p>
               </div>
               <div class="field">
                 <label class="label">Password</label>
                 <input required class="input" placeholder="Password" name="password" type="password" />
-                <p class="help is-danger">${getError(errors, 'password')}</p>
-              </div>
-              <div class="field">
-                <label class="label">Password Confirmation</label>
-                <input required class="input" placeholder="Password Confirmation" name="passwordConfirmation" type="password" />
-                <p class="help is-danger">${getError(
-                  errors,
-                  'passwordConfirmation'
-                )}</p>
+                <p class="help is-danger"></p>
               </div>
               <button class="button is-primary">Submit</button>
             </form>
-            <a href="/signin">Have an account? Sign In</a>
+            <a href="/admin/cadastro">Need an account? Sign Up</a>
           </div>
         </div>
       </div>

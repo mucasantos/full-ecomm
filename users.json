@@ -1,7 +1,14 @@
 [
     {
-        "nome": "Joao Lima",
-        "email": "joaoLima@email.com",
-        "id": "c26f3cbd"
+        "email": "sam@email.com",
+        "password": "gjhjkghdsk",
+        "passwordConfirmation": "gdjkgjdlskfj",
+        "id": "e9925d2f"
+    },
+    {
+        "email": "maria@email.com",
+        "password": "maria",
+        "passwordConfirmation": "maria",
+        "id": "001b3a83"
     }
 ]
