@@ -2,6 +2,9 @@
 * Revisar o que vimos dia 05 com atividade=>
 Antes de começar vá até a branch "resolve" e crie uma branch com o seu nome
 para iniciar a atividade!
+
+https://github.com/mucasantos/full-ecomm
+
 git checkout -b "seunome"
 Os arquivos necessários estão na pasta atividade-6-10
 
