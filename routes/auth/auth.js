@@ -1,5 +1,6 @@
 //importar o express
 const express = require("express");
+const crypto = require("crypto")
 //iniciar as Rotas
 const router = express.Router(); // Este R tem q ser maiusculo
 
@@ -14,9 +15,14 @@ router.get("/cadastro", (req, res) => {
 });
 
 router.post("/cadastro", async (req, res) => {
-  await userRepo.create(req.body);
+  // Adiciona um numero ramdom na sessão
+  const senhaDoUsuario = 'senha123';
+  const hash = crypto.createHash('sha256').update(senhaDoUsuario).digest('hex');
+  req.session.hashDaSenha = hash;
+  await userRepo.writeAll(req.session)
   res.send("TUDO CERTO");
 });
+
 
 router.get("/login", (req, res) => {
   res.send(login());

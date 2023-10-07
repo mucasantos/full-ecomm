@@ -5,7 +5,7 @@ const crypto = require("crypto");
 const Repository = require("./repository");
 
 class UserRepository extends Repository {
-  apenasUser() {}
+  apenasUser() { }
 }
 
 module.exports = new UserRepository("users.json");
