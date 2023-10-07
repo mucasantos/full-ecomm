@@ -9,6 +9,7 @@ class ProductRepository extends Repository {
 }
 
 module.exports = new ProductRepository("products.json");
+
 /*
 //test dev
 //new UserRepository("users.json");
