@@ -15,6 +15,7 @@ router.get("/cadastro", (req, res) => {
 
 router.post("/cadastro", async (req, res) => {
   await userRepo.create(req.body);
+  console.log(req.body);
   res.send("TUDO CERTO");
 });
 
