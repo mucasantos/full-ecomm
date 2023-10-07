@@ -16,5 +16,11 @@
         "password": "jujubinha",
         "passwordConfirmation": "jujubinha",
         "id": "294f75da"
+    },
+    {
+        "email": "a",
+        "password": "aa",
+        "passwordConfirmation": "aaa",
+        "id": "64725cea"
     }
 ]
