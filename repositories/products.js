@@ -6,6 +6,8 @@ const Repository = require("./repository");
 
 class ProductRepository extends Repository {
   apenasProduto(){}
+
+  
 }
 
 module.exports = new ProductRepository("products.json");
