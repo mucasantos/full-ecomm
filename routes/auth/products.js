@@ -6,7 +6,7 @@ const router = express.Router(); // Este R tem q ser maiusculo
 const upload = multer({ storage: multer.memoryStorage() });
 
 //importa o repositorio de produtos
-const prodRepo = require("../../repositories/products");
+const prodRepo = require("../../repositories/product");
 const newProduct = require("../../views/admin/products/new");
 
 router.get("/products/new", (req, res) => {
