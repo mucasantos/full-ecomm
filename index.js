@@ -23,5 +23,7 @@ app.use("/admin", authRoutes);
 app.use("/admin", productsRoutes);
 
 app.listen(3000, () => {
+
+
   console.log("Server no ar...");
 });
