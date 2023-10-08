@@ -1,9 +1,8 @@
-const layout = require('../layout');
+const layout = require("../../layout");
 
 module.exports = () => {
   return layout({
     content: `
-
     <div class="columns is-centered">
     <div class="column is-half">
       <h1 class="subtitle">Create a Product</h1>
@@ -30,7 +29,6 @@ module.exports = () => {
       </form>
     </div>
   </div>
-
-    `
+    `,
   });
 };
