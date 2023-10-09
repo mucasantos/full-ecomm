@@ -1,1 +1,142 @@
-[{"email":"sam@email.com","password":"gjhjkghdsk","passwordConfirmation":"gdjkgjdlskfj","id":"e9925d2f"},{"email":"maria@email.com","password":"maria","passwordConfirmation":"maria","id":"001b3a83"},{"email":"jujuba@email.com","password":"jujubinha","passwordConfirmation":"jujubinha","id":"294f75da"},{"id":"434db1d0"},{"id":"897a0cdb"},{"id":"47fb36ec"}]
+[
+    {
+        "email": "sam@email.com",
+        "password": "gjhjkghdsk",
+        "passwordConfirmation": "gdjkgjdlskfj",
+        "id": "e9925d2f"
+    },
+    {
+        "email": "maria@email.com",
+        "password": "maria",
+        "passwordConfirmation": "maria",
+        "id": "001b3a83"
+    },
+    {
+        "email": "jujuba@email.com",
+        "password": "jujubinha",
+        "passwordConfirmation": "jujubinha",
+        "id": "294f75da"
+    },
+    {
+        "id": "434db1d0"
+    },
+    {
+        "id": "897a0cdb"
+    },
+    {
+        "id": "47fb36ec"
+    },
+    {
+        "email": "vvsasvs",
+        "password": "vsdssv",
+        "passwordConfirmation": "svssvsd",
+        "id": "9cd46ed4"
+    },
+    {
+        "email": "guilhermepimenta976@gmail.com",
+        "password": "gui",
+        "passwordConfirmation": "gui",
+        "id": "bc5addc8"
+    },
+    {
+        "email": "guilhermepimenta976@gmail.com",
+        "password": "gui",
+        "passwordConfirmation": "gui",
+        "id": "dd4b9597"
+    },
+    {
+        "email": "guilhermepimenta976@gmail.com",
+        "password": "gui",
+        "passwordConfirmation": "gui",
+        "id": "1176a331"
+    },
+    {
+        "email": "silasurubuzada@gmail.com",
+        "password": "gui1",
+        "passwordConfirmation": "gui1",
+        "id": "f0cb7fa5"
+    },
+    {
+        "email": "silasurubuzada@gmail.com",
+        "password": "gui1",
+        "passwordConfirmation": "gui1",
+        "id": "e11200b2"
+    },
+    {
+        "email": "silasurubuzada@gmail.com",
+        "password": "fdsd",
+        "passwordConfirmation": "sfdsdf",
+        "id": "0576ec5c"
+    },
+    {
+        "email": "guilhermepimenta976@gmail.com",
+        "password": "f1",
+        "passwordConfirmation": "f1",
+        "id": "83c08829"
+    },
+    {
+        "email": "guilhermepimenta6@gmail.com",
+        "password": "f1",
+        "passwordConfirmation": "f1",
+        "id": "a235e3ab"
+    },
+    {
+        "email": "guilhermepimenta6@gmail.com",
+        "password": "$2a$10$Jk6igPmCT.CWixw2NvL81e7EK/rSfXmJCPm3TBLsU0Y7XC2yW/6iO",
+        "id": "040f206d"
+    },
+    {
+        "email": "guilhermepimenta6@gmail.com",
+        "password": "$2a$10$lxB//X1l1EF51hM7ocvoJeN0zgHUv4PcL1v79.QMyAhuSWKVTnqi.",
+        "id": "e6bcc3dc"
+    },
+    {
+        "email": "guilhermepimenta976@gmail.com",
+        "password": "$2a$10$418KX4PvmC6ElGpZQMQadOIAAKQW8UeWJHk9rDjjCXzeNmraq4xaK",
+        "id": "49e7f62c"
+    },
+    {
+        "email": "guilhermep@gmail.com",
+        "password": "$2a$10$B.gqodOkAmHBHVy14wTw9.il8KnHPDetFS6MDnheu3dBYOP5KcYZO",
+        "id": "1c54f149"
+    },
+    {
+        "email": "guilhermep2@gmail.com",
+        "password": "$2a$10$2lrLZatj9fxpC07nGaj86.HCXlqNpc2d6gKResPhNuhPxSXP1cXBm",
+        "id": "1221caaf"
+    },
+    {
+        "email": "gui",
+        "password": "$2a$10$l9oXmAQrg/vm8Vcow5BSM.XIIc.lU4K2LURkL/RYHQz/6WplVkHw6",
+        "id": "873a30c0"
+    },
+    {
+        "email": "gui2",
+        "password": "$2a$10$osYg1nrBfJ/pcCFLyDbHYewdR03DgdoBQ3rDkWb.xb4FgvD9smv26",
+        "id": "31680e95"
+    },
+    {
+        "email": "gui3",
+        "password": "$2a$10$n8ePkzQAUHk1DPEbze7hY.Uuv1l1zf7UU.ZXQMmR8u4J1bZYgcI3C"
+    },
+    {
+        "email": "guitomatoma",
+        "password": "$2a$10$QF3vlup9VH.904QblLdvh.14ESJ/0wcHpnkDLCq0AJ/bf3sE/omZ.",
+        "id": "e071af20"
+    },
+    {
+        "email": "ai",
+        "password": "$2a$10$ZlbL05buxhzB4qcbip1XZeldeWNJ4OIJp1OyDNxc9rvwPzPEnZRsC",
+        "id": "e99c122d"
+    },
+    {
+        "email": "toma",
+        "password": "$2a$10$S5r5VeB5ECagegXEdnuPguAnmoLxO4f5Rh0XeT8Wu7oENTvjwK076",
+        "id": "d1d0539e"
+    },
+    {
+        "email": "tomaa",
+        "password": "$2a$10$8UxIP.o4QXGqOsVjzfTRgOzHUWV8td84DsG9V.QCmxurssLXctR6u",
+        "id": "76969bd2"
+    }
+]
