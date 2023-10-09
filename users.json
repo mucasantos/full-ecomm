@@ -17,5 +17,23 @@
     "passwordConfirmation": "123",
     "id": "a52220d3"
   },
-  { "id": "a73515a8" }
+  { "id": "a73515a8" },
+  {
+    "email": "guilhermesampaio768@gmail.com",
+    "password": "12345",
+    "passwordConfirmation": "12345",
+    "id": "05cd8c36"
+  },
+  {
+    "email": "guilhermesampaio768@gmail.com",
+    "password": "12345",
+    "passwordConfirmation": "12345",
+    "id": "e951d122"
+  },
+  {
+    "email": "guilhermesampaio768@gmail.com",
+    "password": "1234",
+    "passwordConfirmation": "1234",
+    "id": "978f1b74"
+  }
 ]

@@ -22,7 +22,7 @@ app.use(express.static("public"));
 app.use("/admin", authRoutes);
 app.use("/admin", productsRoutes);
 
-app.listen(3000, () => {
+app.listen(3020, () => {
   
   console.log("Server no ar...");
 

@@ -14,7 +14,7 @@ router.get("/products/new", (req, res) => {
 });
 
 router.post("/products/new", upload.single("image"), async (req, res) => {
-  console.log(req.body);
+  console.log(req.session);
   await prodRepo.create(req.body);
   res.send("Produto criado...");
 });
