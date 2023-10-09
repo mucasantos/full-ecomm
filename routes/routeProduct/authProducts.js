@@ -1,3 +1,4 @@
+const multer = require("multer");
 const express = require('express')
 const router = express.Router()
 const upload = multer({storage: multer.memoryStorage()})
@@ -6,7 +7,6 @@ const newProducts = require('../../views/products/newProducts')
 const products = require('../../views/products/products')
 
 const productsRepo = require('../../repositories/products')
-const multer = require('multer')
 
 router.get("/cadastro", (req, res) => {
   res.send(newProducts());

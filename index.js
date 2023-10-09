@@ -2,21 +2,22 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth/auth");
-const authProducts = require("./routes/routeProduct/authProducts");
+const productRoutes = require("./routes/routeProduct/authProducts")
 
-//user o body parser em um middleware
+const cookieSession = require("cookie-session")
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
-//middleware para expor uma pasta pública, como CSS
 app.use(express.static("public"));
 
+app.use(cookieSession({
+  keys: ['gfjdslkj543648gjdkh565']
+})) 
 
-//nosso filtro q informa q toda req tem q ser /admin
+
 app.use("/admin", authRoutes);
-app.use("/products", authProducts)
+app.use("/products", productRoutes);
 
-
-
-app.listen(4040, () => {
+app.listen(3000, () => {
   console.log("Server no ar...");
-});
-   
+}); 
