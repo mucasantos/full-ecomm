@@ -31,5 +31,6 @@ e melhorando a capacidade de manutenção do código.
 19 e 20 de outubro
 *Trabalhar na tela de Produtos
 
-
 *Upload de arquivos
+
+** Iniciar projeto full => adoção de animais
