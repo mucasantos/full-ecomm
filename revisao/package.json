@@ -1,12 +1,18 @@
 {
   "name": "revisao",
   "version": "1.0.0",
-  "description": "",
-  "main": "revisao.js",
+  "description": "Revisão full nodejs",
+  "main": "index.js",
   "scripts": {
+    "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Galera Senai Noite - DS",
+  "license": "ISC - FREEZAO",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
 }
