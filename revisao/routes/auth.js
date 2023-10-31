@@ -1,13 +1,14 @@
 const express = require("express")
 //importar o router do express
 const router = express.Router()
+//Importei o meu user
+const userRepo = require('../repositories/users')
 
 router.post('/login', (req, res) => {
     res.send("Login com sucesso...")
 })
 router.post('/signup', (req, res) => {
-
-    console.log(req.body)
+    userRepo.create(req.body)
 
     /*
     SEGUNDA
