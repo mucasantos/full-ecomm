@@ -24,6 +24,9 @@ server.use(bodyParser.urlencoded({ extended: true }));
 //Pegamos os dados que vem como JSON
 server.use(bodyParser.json());
 
+//usar arquivos estáticos
+server.use(app.static('public'))
+
 server.use("/admin", authRoutes);
 server.use("/admin", productRoutes);
 

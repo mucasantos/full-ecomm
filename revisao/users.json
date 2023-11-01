@@ -8,5 +8,10 @@
         "name": "Giovanna M",
         "email": "gi@email.com",
         "password": "12345678"
+    },
+    {
+        "email": "maria@email.com",
+        "password": "ZefD-X-tukb9RZp",
+        "passwordConfirmation": "ZefD-X-tukb9RZp"
     }
 ]
