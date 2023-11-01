@@ -15,19 +15,19 @@ router.get("/login", (req, res) => {
 
 router.post("/login", (req, res) => {
 
-    res.send(prodScreen({}));
+    //res.send(prodScreen({}));
 
 
     //DEvolver uma tela com produtos fake!
     //Verificar o user!
 
     //redirecionar para produtos
-    //res.redirect("/admin/products")
+    res.redirect("/admin/products")
  });
 
-router.get('/products', (req,res) => {
-    res.send(prodScreen({}));
-})
+//router.get('/products', (req,res) => {
+//    res.send(prodScreen({}));
+//})
 //Mostra a view
 router.get("/signup", (req, res) => {
   res.send(screenSignup());

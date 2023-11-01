@@ -126,6 +126,7 @@ module.exports = ({ content }) => {
         <!-- Product -->  
         <section class="product">
             <!-- First line -->
+            
             <div class="productCard">
                 <div class="productCardFlag">
                     <span>Mais vendido</span>

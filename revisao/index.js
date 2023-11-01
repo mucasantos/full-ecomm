@@ -33,3 +33,7 @@ server.use("/admin", productRoutes);
 server.listen(3001, () => {
   console.log("Servidor no ar...");
 });
+
+
+//Criar uma rota /products que mostre no console.log todos os
+//dados do arquivo products.json
