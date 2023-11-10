@@ -1,19 +1,24 @@
-const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
+const app = require("express")
 
-const authRoutes = require("./routes/auth/auth");
-const productsRoutes = require("./routes/auth/products");
+const server = app()
 
-//user o body parser em um middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-//middleware para expor uma pasta pública, como CSS
-app.use(express.static("public"));
+const bodyParser = require("body-parser")
 
-//nosso filtro q informa q toda req tem q ser /admin
-app.use("/admin", authRoutes);
-app.use("/admin", productsRoutes);
+const authRoutes = require("./routes/auth")
 
-app.listen(3000, () => {
-  console.log("Server no ar...");
-});
+const productsRoutes = require("./routes/product")
+
+//pegamos os dados de um formulario HTML
+server.use(bodyParser.urlencoded({ extended: true }))
+//pegamos os dados que vem como json
+server.use(bodyParser.json())
+
+server.use(app.static("public"))
+
+server.use('/admin', authRoutes)
+
+server.use('/admin', productsRoutes)
+
+server.listen(3001, () => {
+    console.log("servidor no ar ...")
+})

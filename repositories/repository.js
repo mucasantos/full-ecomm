@@ -1,21 +1,22 @@
-/*
-A ideia é criar um super classe, com os médodos e atributos comuns para produtos e usuários,
-e demais classes que sejam necessárias.
-*/
-//module.exports -> indica que quero que os outros arquivos acessem este módulo.
+// importtar o fs
+// criar os metodos para salvar o nosso user
 
-//trabalhar com o filesystem
 const fs = require("fs");
-const crypto = require("crypto");
 
+// classe com um construtor que cria o nosso arquivo
+// usamos o modele.exports
+
+
+// este repositorio sera utilizado para criar os metodos comuns
 
 module.exports = class Repository {
-//Construtor com a verificação de arquivo
-constructor(filename) {
+  // construtor, verificar se recebo um nom
+
+  constructor(filename) {
     if (!filename) {
-      throw new Error("Tu precisa informa um nome de arquivo!!");
+      throw new Error("voce precisa informar o nome de um  arquivo!");
     }
-    //propriedade da classe
+    //atributo da classe
     this.filename = filename;
     try {
       fs.accessSync(this.filename);
@@ -23,63 +24,26 @@ constructor(filename) {
       fs.writeFileSync(this.filename, "[]");
     }
   }
-  //Criar os métodos
+  // nossos metodos
+  async create(atributos) {
+    //ler todos os dados de um arquivo
+    const records = await this.getAll();
+    //os dados e uma lista, add os dados em uma lista
+    records.push(atributos)
+
+    await this.writeAll(records)
+
+
+  }
+
 
   async getAll() {
-    /*
-    //abrir o arquivo (this.filename)
-    const contents = await fs.promises.readFile(this.filename);
-    // fazer parse para JSON
-    const data = JSON.parse(contents);
-    //ler o conteudo
-    //retornar a lista
-    return data;
-*/
-    return JSON.parse(await fs.promises.readFile(this.filename));
-  }
-
-  async create(atributos) {
-
-    console.log(atributos)
-    //adicionar o id ao atributo recebido
-    atributos.id = this.randomId();
-    //Ler o meu arquivo
-    const records = await this.getAll();
-    //gravar no array records
-    records.push(atributos);
-    //devolver para o arquivo
-    await this.writeAll(records);
-  }
-
-  async getOne(id) {
-    //lista de todos os usuários (array)
-    const records = await this.getAll();
-    const searchUser = records.find((record) => record.id === id);
-    console.log(searchUser);
-    return searchUser;
-  }
-
-  async delete(id) {
-    const records = await this.getAll();
-    const updatedList = records.filter((record) => record.id !== id);
-    await this.writeAll(updatedList);
-  }
-
-  async update(id, atributos) {
-    //Pegar todos
-    const records = await this.getAll();
-    //Buscar o elemento por id = Aqui eu pego a REFERENCIA do objeto no array
-    const toUpdate = records.find((record) => record.id === id);
-    //faz o update do ojeto que eu quero
-    Object.assign(toUpdate, atributos);
-
-    await this.writeAll(records);
+    return JSON.parse(await fs.promises.readFile(this.filename))
   }
 
   async writeAll(records) {
-    await fs.promises.writeFile(this.filename, JSON.stringify(records));
+    await fs.promises.writeFile(this.filename, JSON.stringify(records))
   }
-  randomId() {
-    return crypto.randomBytes(4).toString("hex");
-  }
-}
+
+
+};
