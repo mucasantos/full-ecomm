@@ -34,7 +34,7 @@ module.exports = class Repository {
     //retornar a lista
     return data;
 */
-    return JSON.parse(await fs.promises.readFile(this.filename));
+      return JSON.parse(await fs.promises.readFile(this.filename));
   }
 
   async getOne(id) {
