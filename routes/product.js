@@ -26,4 +26,6 @@ router.get('/product', async (req, res) => {
     res.send(myCards({content: allProds}))
 })
 
+
+
 module.exports = router

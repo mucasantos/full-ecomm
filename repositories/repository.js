@@ -32,8 +32,27 @@ module.exports = class Repository {
     records.push(atributos)
 
     await this.writeAll(records)
+  }
 
-
+  async getOneBy(filtros) {
+    console.log(filtros)
+    // lista de todos usuarios (array)
+    const records = await this.getAll()
+    // o loop externo estamos iterando com o array (of)
+    // já o IntersectionObserver, estaremos iterando com os objetos (in)
+    for (let record of records) {
+      // aqui temos a sinalização de que encontramos
+      // acessar um objeto em js pode ser objeto.key ou objeto[key]
+      let encontrado = true
+      for (let key in filtros) {
+        if (records[key] != filtros[key]) {
+          encontrado = false
+        }
+      }
+      if (encontrado) {
+        return record
+      }
+    }
   }
 
 

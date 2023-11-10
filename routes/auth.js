@@ -8,23 +8,20 @@ const prodRepo = require('../repositories/products')
 const screenSignup = require('../views/signup')
 const screenLogin = require('../views/login')
 
-router.post('/add-login', (req, res) => {
-    //devolver uma tela com produtos feitos
-    // verificar user
-    res.send("finalizando")
-})
-
 router.get('/login', (req, res) => {
     res.send(screenLogin())
 })
 
+router.post('/login', async (req, res) => {
+    const user = await userRepo.getOneBy({ email, password })
 
+    if (user) {
+        req.session.userId = user.userId
+        res.send("Usuario encontrado")
+    }else{
+        res.send("Usario nao encontrado")
+    }
 
-router.post('/add-signup', (req, res) => {
-
-
-    userRepo.create(req.body)
-    res.send("cadastro criado")
 })
 
 
@@ -32,12 +29,8 @@ router.get('/signup', (req, res) => {
     res.send(screenSignup())
 })
 
-router.post('/prod-layout', (req, res) => {
-
-
-    prodRepo.create(req.body)
-
-    res.send("cadastro criado")
+router.get("/sair",(req,res)=>{
+    req.session = nullres.send("Sessao finalizada...")
 })
 
 module.exports = router
