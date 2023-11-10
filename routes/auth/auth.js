@@ -14,17 +14,16 @@ router.get("/cadastro", (req, res) => {
 });
 
 router.post("/cadastro", async (req, res) => {
-
   //Forma de extrair as variáveis no ES6
-  const { email, password, confirmPassword} = req.body
+  const { email, password, confirmPassword } = req.body;
 
   //Antes de criar, temos que verificar se o usuário já existe no DB
-  //Se a senha e senha confirmada são iguais, 
+  //Se a senha e senha confirmada são iguais,
   //e se a senha tem um tamanho mínimo... (exercício de validação)
 
   //Criar o usuário em nosso DB -> levar o create para o userrepo!
 
-  const user = await userRepo.create({email: email, password: password});
+  const user = await userRepo.create({ email: email, password: password });
 
   //Guardar o id criado dentro do cookie, para assim, identificar este usuário
   //e ainda, associar este cookie ao user
@@ -32,38 +31,37 @@ router.post("/cadastro", async (req, res) => {
 
   //por causa do cookie, teremos acesso ao session
   //a palavra userId nós que criamos! pode ser qq nome...
-  req.session.userId = user.id;
+  //req.session.userId = user.id;
 
   res.send("TUDO CERTO");
 });
 
 router.get("/login", (req, res) => {
   //PAra testar tem que enviar os dados!! Alterar na view e aqui
-  res.send(login(req,res));
+  res.send(login(req, res));
 });
-router.post("/login", async(req, res) => {
-  const { email, password} = req.body
-
-  //PAra testar tem que enviar os dados!! Alterar na view e aqui
-  
-  //Antes de atribuir, temos q consultar o BD e ver se esta tudo 
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  //Para testar tem que enviar os dados!! Alterar na view e aqui
+  //Antes de atribuir, temos q consultar o BD e ver se esta tudo
   //correto!!
+  const user = await userRepo.getOneBy({ email, password });
 
-  const user = await userRepo.getOneBy({email, password})
+  if (user) {
+   //Aplicar uma session
+    //req.session (o session posso utilizar por causa do pacote cookie-session)
+    //.userId => identificação criada pelo desenvolvedor
 
-  if(user) {
-    req.session.userId = user.id;
-
-    res.send("sucesso!" + user.id);
+   req.session.userId = user.id
+    res.send("Usuário encontrado...")
   }else {
-  res.send("Erro!!!");
+    res.send("Nao autorizado.....")
   }
-  
-  
+
 });
 
 router.get("/sair", (req, res) => {
-//Logout do usuário
+  //Logout do usuário
   req.session = null;
   res.send("Sessão finalizada...");
 });

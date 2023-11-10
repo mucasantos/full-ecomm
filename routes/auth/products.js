@@ -21,7 +21,12 @@ router.post("/products/new", upload.single("image"), async (req, res) => {
 });
 
 router.get("/products", (req, res) => {
-  res.send("Aqui mostraremos todos os produtos...");
+  console.log(req.session.userId)
+
+  res.send("Aqui mostraremos todos os produtos..." + req.session.userId );
 });
 
+router.get('/bla',(req, res)=> {
+  res.send("OK")
+})
 module.exports = router;

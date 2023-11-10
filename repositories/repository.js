@@ -44,18 +44,19 @@ module.exports = class Repository {
     console.log(searchUser);
     return searchUser;
   }
-
-
   //Criar o getOneBy
-
+  //Essa logica funciona pois sabemos que o conteudo de usuarios ~e
+  //obrigatoriamente unica!!
   async getOneBy(filtros) {
     //lista de todos os usuários (array)
     const records = await this.getAll();
-
     //O loop externo estamos iterando com o array (of)
     //Já o interno, estaremos iterando com os objetos (in)
     for (let record of records) {
       //Aqui teremos a sinalização de q encontramos
+      //{"email":"sam@email.com","password":"12345678","id":"1ec7990f"}
+      //Acessar um objeto em Js pode ser: objeto.key (ex: user.email)
+      //ou objeto[key]
       let encontrado = true;
       for (let key in filtros) {
         if (record[key] !== filtros[key]) {
