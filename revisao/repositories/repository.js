@@ -30,9 +30,13 @@ module.exports = class Repository {
     await this.writeAll(records)
   }
   async getAll() {
+
+    //Eu posso trocar para o acesso a um DB
     return JSON.parse(await fs.promises.readFile(this.filename));
   }
   async writeAll(records) {
     await fs.promises.writeFile(this.filename, JSON.stringify(records));
   }
 };
+
+

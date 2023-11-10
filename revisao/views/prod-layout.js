@@ -1,4 +1,18 @@
+/*
+Criar um card html (js) - cardproduct
+
+1. Ler a lista de produtos, e para cada produto da lista,
+criar um card.
+2. Enviar o conjunto de cards, para o esse arquivo prodlayouts
+
+
+*/
+
+
+
+
 module.exports = ({ content }) => {
+
   return `
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -126,179 +140,8 @@ module.exports = ({ content }) => {
         <!-- Product -->  
         <section class="product">
             <!-- First line -->
-            
-            <div class="productCard">
-                <div class="productCardFlag">
-                    <span>Mais vendido</span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/bag-orange.webp" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag hide">
-                    <span></span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/11s.avif" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag hide">
-                    <span></span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/12s.webp" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag">
-                    <span>Mais vendido</span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/95.webp" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <!-- Second line -->
-            <div class="productCard">
-                <div class="productCardFlag hide">
-                    <span></span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/97.webp" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag">
-                    <span>Promoção</span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/270.avif" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <div class="productPrice">
-                        <span>R$ 15,00</span>
-                        <span>R$ 14,25</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag hide">
-                    <span></span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/dunkazul.jpg" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag hide">
-                    <span></span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/excee.webp" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <!-- Third line -->
-            <div class="productCard">
-                <div class="productCardFlag hide">
-                    <span></span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/ls.png" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag">
-                    <span>Mais vendido</span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/r4.jpeg" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag">
-                    <span>Mais vendido</span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/tnazul.webp" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
-
-            <div class="productCard">
-                <div class="productCardFlag hide">
-                    <span></span>
-                </div>
-                <div class="productCardImage">
-                    <img src="/image/tnazul3.webp" alt="Product One" />
-                </div>
-                <div class="productInfo">
-                    <h2>Sou um produto</h2>
-                    <hr />
-                    <span>R$ 15,00</span>
-                </div>
-            </div>
+                       
+            ${content}
         </section>
 
         <!-- Information -->
