@@ -5,9 +5,7 @@ const crypto = require("crypto");
 const Repository = require("./repository");
 
 class ProductRepository extends Repository {
-  apenasProduto(){}
-
-  
+  apenasProduto(){}  
 }
 
 module.exports = new ProductRepository("products.json");

@@ -8,10 +8,9 @@ e demais classes que sejam necessárias.
 const fs = require("fs");
 const crypto = require("crypto");
 
-
 module.exports = class Repository {
-//Construtor com a verificação de arquivo
-constructor(filename) {
+  //Construtor com a verificação de arquivo
+  constructor(filename) {
     if (!filename) {
       throw new Error("Tu precisa informa um nome de arquivo!!");
     }
@@ -38,25 +37,35 @@ constructor(filename) {
     return JSON.parse(await fs.promises.readFile(this.filename));
   }
 
-  async create(atributos) {
-
-    console.log(atributos)
-    //adicionar o id ao atributo recebido
-    atributos.id = this.randomId();
-    //Ler o meu arquivo
-    const records = await this.getAll();
-    //gravar no array records
-    records.push(atributos);
-    //devolver para o arquivo
-    await this.writeAll(records);
-  }
-
   async getOne(id) {
     //lista de todos os usuários (array)
     const records = await this.getAll();
     const searchUser = records.find((record) => record.id === id);
     console.log(searchUser);
     return searchUser;
+  }
+
+
+  //Criar o getOneBy
+
+  async getOneBy(filtros) {
+    //lista de todos os usuários (array)
+    const records = await this.getAll();
+
+    //O loop externo estamos iterando com o array (of)
+    //Já o interno, estaremos iterando com os objetos (in)
+    for (let record of records) {
+      //Aqui teremos a sinalização de q encontramos
+      let encontrado = true;
+      for (let key in filtros) {
+        if (record[key] !== filtros[key]) {
+          encontrado = false;
+        }
+      }
+      if (encontrado) {
+        return record
+      }
+    }
   }
 
   async delete(id) {

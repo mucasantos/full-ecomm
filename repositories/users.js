@@ -7,6 +7,21 @@ const Repository = require("./repository");
 class UserRepository extends Repository {
   apenasUser() {}
 
+  async create(atributos) {
+
+    console.log(atributos)
+    //adicionar o id ao atributo recebido
+    atributos.id = this.randomId();
+    //Ler o meu arquivo
+    const records = await this.getAll();
+    //gravar no array records
+    records.push(atributos);
+    //devolver para o arquivo
+    await this.writeAll(records);
+
+    return atributos
+  }
+
   
 }
 

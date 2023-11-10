@@ -1,0 +1,23 @@
+Fluxo de autenticação com cookie
+
+Ideia Geral
+1. Criar um usuário em nosso repository que representa esta pessoa
+2. Guardar o ID deste usuário dentro de seu cookie e para assim, identificar este usuário
+  e ainda, associar este cookie ao user
+
+1 => na rota de autenticação, na rota de cadastro do usuário, vamos
+instanciar o nosso repoUser e chamá-lo de forma assíncrona. (async)
+
+Precisamos agora saber o ID do usuário. Assim, vamos modificar o nosso 
+método create e levá-lo para dentro de UserRepository!
+
+2 => Trabalhar com Cookie é complexo e não devemos fazer por nossa conta
+e sim utilizar uma biblioteca para gerenciar o acesso.
+Utilizaremos o cookie-session (npm install cookie-session)
+
+PAra testar se isso deu certo, vamos até a nossa view e imprimir
+o id do user
+
+Se tiver ID, isso quer dizer que ele fez login. Se for indefinido, ele ainda não fez 
+o login!
+
