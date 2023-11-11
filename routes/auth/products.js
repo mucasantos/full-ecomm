@@ -8,11 +8,11 @@ const upload = multer({ storage: multer.memoryStorage() });
 //importa o repositorio de produtos
 const prodRepo = require("../../repositories/products");
 const newProduct = require("../../views/admin/products/new");
+const cardProduct = require("../../views/admin/products/card")
 
-router.post("/products/new", (req, res) => {
+router.get("/products/new", (req, res) => {
   res.send(newProduct());
 });
-
 
 router.post("/products/new", upload.single("image"), async (req, res) => {
   console.log(req.body);
@@ -20,13 +20,15 @@ router.post("/products/new", upload.single("image"), async (req, res) => {
   res.send("Produto criado...");
 });
 
-router.get("/products", (req, res) => {
+router.get("/products", async (req, res) => {
   console.log(req.session.userId)
 
-  res.send("Aqui mostraremos todos os produtos..." + req.session.userId );
+  const allprods = await prodRepo.getAll();  // Corrigi a chamada para prodRepo.getAll()
+  res.send(cardProduct({ content: allprods }));
 });
 
-router.get('/bla',(req, res)=> {
+router.get('/bla', (req, res) => {
   res.send("OK")
-})
+});
+
 module.exports = router;

@@ -1,0 +1,86 @@
+[
+    {
+        "class": "productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/bag-orange.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag hide",
+        "flag": "Mais vendidos",
+        "image": "/image/11s.avif",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag hide",
+        "flag": "Mais vendidos",
+        "image": "/image/12s.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/95.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/97.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/270.avif",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag hide",
+        "flag": "Mais vendidos",
+        "image": "/image/dunkazul.jpg",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag hide",
+        "flag": "Mais vendidos",
+        "image": "/image/excee.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag hide",
+        "flag": "Mais vendidos",
+        "image": "/image/ls.png",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/r4.jpeg",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/tnazul.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class": "productCardFlag hide",
+        "flag": "Mais vendidos",
+        "image": "/image/tnazul3.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    }
+]

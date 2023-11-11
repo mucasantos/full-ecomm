@@ -5,6 +5,9 @@ const router = express.Router(); // Este R tem q ser maiusculo
 
 const cadastro = require("../../views/admin/signup");
 const login = require("../../views/admin/signin");
+const cardProduct = require("../../views/admin/products/card")
+const prodRepo = require("../../repositories/products");
+const error403 = require("../../views/admin/error403")
 
 //importa o repositorio de usuário
 const userRepo = require("../../repositories/users");
@@ -33,7 +36,7 @@ router.post("/cadastro", async (req, res) => {
   //a palavra userId nós que criamos! pode ser qq nome...
   //req.session.userId = user.id;
 
-  res.send("TUDO CERTO");
+  res.send("Cadastro realizado!");
 });
 
 router.get("/login", (req, res) => {
@@ -53,9 +56,10 @@ router.post("/login", async (req, res) => {
     //.userId => identificação criada pelo desenvolvedor
 
    req.session.userId = user.id
-    res.send("Usuário encontrado...")
+   const allprods = await prodRepo.getAll();  // Corrigi a chamada para prodRepo.getAll()
+   res.send(cardProduct({ content: allprods }));
   }else {
-    res.send("Nao autorizado.....")
+    res.send(error403())
   }
 
 });
