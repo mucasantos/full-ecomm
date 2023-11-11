@@ -42,40 +42,44 @@
         "price": "R$15,00"
     },
     {
-        "class":"productCardFlag",
+        "class":"productCardFlag hide",
         "flag": "Mais vendidos",
-        "image": "/image/270.avif",
+        "image": "/image/dunkazul.jpg",
         "nome": "Sou um produto",
         "price": "R$15,00"
     },
     {
+        "class":"productCardFlag hide",
         "flag": "Mais vendidos",
-        "image": "/image/bag-orange.webp",
-        "nome": "Bulbasaur",
+        "image": "/image/excee.webp",
+        "nome": "Sou um produto",
         "price": "R$15,00"
     },
     {
+        "class":"productCardFlag hide",
         "flag": "Mais vendidos",
-        "image": "/image/bag-orange.webp",
-        "nome": "Bulbasaur",
+        "image": "/image/ls.png",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },{
+        "class":"productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/r4.jpeg",
+        "nome": "Sou um produto",
         "price": "R$15,00"
     },
     {
+        "class":"productCardFlag",
         "flag": "Mais vendidos",
-        "image": "/image/bag-orange.webp",
-        "nome": "Bulbasaur",
+        "image": "/image/tnazul.webp",
+        "nome": "Sou um produto",
         "price": "R$15,00"
     },
     {
+        "class":"productCardFlag hide",
         "flag": "Mais vendidos",
-        "image": "/image/bag-orange.webp",
-        "nome": "Bulbasaur",
-        "price": "R$15,00"
-    },
-    {
-        "flag": "Mais vendidos",
-        "image": "/image/bag-orange.webp",
-        "nome": "Bulbasaur",
+        "image": "/image/tnazul3.webp",
+        "nome": "Sou um produto",
         "price": "R$15,00"
     }
     ]

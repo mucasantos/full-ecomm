@@ -7,7 +7,7 @@ module.exports = ({content: products}) => {
     const allProds = products.map((product) =>{
         return `
         <div class="productCard">
-    <div class="productCardFlag">
+    <div class="${product.class}">
         <span>${product.flag}</span>
     </div>
     <div class="productCardImage">
