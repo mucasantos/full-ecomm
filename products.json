@@ -1,0 +1,81 @@
+[
+    {
+        "class":"productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/bag-orange.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class":"productCardFlag hide",
+        "flag": "Mais vendidos",
+        "image": "/image/11s.avif",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class":"productCardFlag hide",
+        "flag": "Mais vendidos",
+        "image": "/image/12s.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class":"productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/95.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class":"productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/97.webp",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class":"productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/270.avif",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "class":"productCardFlag",
+        "flag": "Mais vendidos",
+        "image": "/image/270.avif",
+        "nome": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendidos",
+        "image": "/image/bag-orange.webp",
+        "nome": "Bulbasaur",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendidos",
+        "image": "/image/bag-orange.webp",
+        "nome": "Bulbasaur",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendidos",
+        "image": "/image/bag-orange.webp",
+        "nome": "Bulbasaur",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendidos",
+        "image": "/image/bag-orange.webp",
+        "nome": "Bulbasaur",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendidos",
+        "image": "/image/bag-orange.webp",
+        "nome": "Bulbasaur",
+        "price": "R$15,00"
+    }
+    ]

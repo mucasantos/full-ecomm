@@ -2,14 +2,16 @@ const express = require("express");
 const multer = require("multer")
 const router = express.Router();
 const upload = multer({storage:multer.memoryStorage()})
-
-const produto = require("../../views/admin/produto");
+const produto = require("../../views/admin/prod-layout");
 const newProduto = require("../../views/admin/newProduto");
+const produtoJson = require("../../repositories/products");
+const myCards = require("../../views/admin/card")
 
-const productRepo = require("../../repositories/products");
 
-router.get("/products", (req, res) => {
+router.get("/products", async (req, res) => {
+    const allprods = await produtoJson.getAll();
 
+    res.send(myCards({content: allprods}))
 })
 
 router.get("/products/new", (req, res) => {
