@@ -1,13 +1,16 @@
-const layout = require('../layout');
+const layout = require('../../views/layout');
 
-module.exports = () => {
+module.exports = (req,res) => {
   return layout({
     content: `
+
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-one-quarter">
             <form method="POST">
               <h1 class="title">Sign in</h1>
+              O seu id é: ${req.session.userId}
+
               <div class="field">
                 <label class="label">Email</label>
                 <input required class="input" placeholder="Email" name="email" />

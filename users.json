@@ -1,14 +1,1 @@
-[
-    {
-        "email": "sam@email.com",
-        "password": "gjhjkghdsk",
-        "passwordConfirmation": "gdjkgjdlskfj",
-        "id": "e9925d2f"
-    },
-    {
-        "email": "maria@email.com",
-        "password": "maria",
-        "passwordConfirmation": "maria",
-        "id": "001b3a83"
-    }
-]
+[{"email":"sam@email.com","password":"12345678","id":"1ec7990f"},{"email":"a","password":"a","id":"1eb90aba"},{"email":"d","password":"d","id":"2b26c89e"},{"email":"s","password":"s","id":"c64d8de8"},{"email":"d","password":"d","id":"f19405bc"}]

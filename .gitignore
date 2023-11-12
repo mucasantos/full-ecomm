@@ -1,4 +1,5 @@
 node_modules
+revisao/node_modules
 build
 npm-debug.log
 .nyc
