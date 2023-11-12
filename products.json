@@ -1,1 +1,86 @@
-[{"id":"41d4b6ee"},{"id":"e0816b7b"},{"id":"d0ad1d13"},{"id":{}},{"title":"wwgwag","price":"asgsasag","image":"","id":"3aecd253"},{"title":"wwgwagewweb","price":"asgsasagrewberw","image":"zoiomacabro.jpg","id":"a562d9f6"},{"title":"grgwwq","price":"wqqgqgwq","image":"zoiomacabro.jpg","id":"5125ac7a"}]
+[
+  {
+    "class": "productCardFlag",
+    "flag": "Mais vendidos",
+    "image": "/image/bag-orange.webp",
+    "nome": "Bolsa Tote Laranja",
+    "price": "R$89,90"
+  },
+  {
+    "class": "productCardFlag hide",
+    "flag": "Mais vendidos",
+    "image": "/image/11s.avif",
+    "nome": "Tênis Esportivo Branco",
+    "price": "R$279,00"
+  },
+  {
+    "class": "productCardFlag hide",
+    "flag": "Mais vendidos",
+    "image": "/image/12s.webp",
+    "nome": "Tênis Running Preto",
+    "price": "R$349,00"
+  },
+  {
+    "class": "productCardFlag",
+    "flag": "Mais vendidos",
+    "image": "/image/95.webp",
+    "nome": "Tênis Air Max Cinza",
+    "price": "R$489,00"
+  },
+  {
+    "class": "productCardFlag",
+    "flag": "Mais vendidos",
+    "image": "/image/97.webp",
+    "nome": "Tênis Air Max 97 Preto",
+    "price": "R$529,00"
+  },
+  {
+    "class": "productCardFlag",
+    "flag": "Mais vendidos",
+    "image": "/image/270.avif",
+    "nome": "Tênis Air Max 270 Vermelho",
+    "price": "R$599,00"
+  },
+  {
+    "class": "productCardFlag hide",
+    "flag": "Mais vendidos",
+    "image": "/image/dunkazul.jpg",
+    "nome": "Tênis Dunk Azul",
+    "price": "R$720,00"
+  },
+  {
+    "class": "productCardFlag hide",
+    "flag": "Mais vendidos",
+    "image": "/image/excee.webp",
+    "nome": "Tênis Excee",
+    "price": "R$429,00"
+  },
+  {
+    "class": "productCardFlag hide",
+    "flag": "Mais vendidos",
+    "image": "/image/ls.png",
+    "nome": "Tênis Lifestyle",
+    "price": "R$389,00"
+  },
+  {
+    "class": "productCardFlag",
+    "flag": "Mais vendidos",
+    "image": "/image/r4.jpeg",
+    "nome": "Tênis R4 Bege",
+    "price": "R$550,00"
+  },
+  {
+    "class": "productCardFlag",
+    "flag": "Mais vendidos",
+    "image": "/image/tnazul.webp",
+    "nome": "Tênis TN Azul",
+    "price": "R$620,00"
+  },
+  {
+    "class": "productCardFlag hide",
+    "flag": "Mais vendidos",
+    "image": "/image/tnazul3.webp",
+    "nome": "Tênis TN Azul Claro",
+    "price": "R$620,00"
+  }
+]
