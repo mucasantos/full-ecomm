@@ -1,27 +1,25 @@
-const express =require('express')
-const app = express()
-const bodyParser  = require('body-parser')
+const express = require("express");
+const app = express();
 
-//user o body parser em um middleware
-app.use(bodyParser.urlencoded({extended: true}))
+const authRoutes = require("./routes/auth");
+const productsRoutes = require("./routes/products");
 
-app.get('/', (req,res)=>{
-    res.send(`
-    <div>
-    <form method="POST">
-        <input name="email" placeholder="email">
-        <input name="senha" placeholder="Senha">
-        <input name="confirmSenha" placeholder="Confirmar senha">
-        <button>Cadastrar</button>
-    </form>
-</div>`)
-})
+const validSession = require('./controller/verify_session')
 
-app.post('/', (req, res) => {
-    console.log(req.body)
-    res.send('Tudo certo...')
-})
+const bodyParser = require("body-parser");
+const cookieSession = require('cookie-session')
 
-app.listen(3000, ()=> {
-    console.log("Server no ar...")
-})
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.static("public"));
+
+app.use(cookieSession({
+  keys: ['septidfljkhsdlkgjdhsgkljsdhlgs69859680']
+}))
+
+app.use("/admin", authRoutes);
+app.use("/admin", validSession, productsRoutes);
+
+app.listen(3000, () => {
+  console.log("Server no ar...");
+});
