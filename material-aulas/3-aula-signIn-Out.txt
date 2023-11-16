@@ -1,0 +1,15 @@
+Fazendo o logout e login de nosso usuário
+
+1. O logout do usuário é basicamente criar uma rota e atribuir o valor
+nulo (null) ao req.session.
+
+(atividade!) => esperado: Ir até o arquivo de rotas auth e criar o 
+endpoint /sair
+
+Após isso, o nosso userID da view será vista como undefined
+
+2. O login nós ja temos. Vamos apenas adicionar a linha
+  req.session.userId = user.id;
+para atribuir a session dele.
+
+Criar o método getOneBy

@@ -28,6 +28,12 @@
     flex-direction: column;
     flex: 1 25%;
     padding: 10px;
+<<<<<<< HEAD
+=======
+    background-color: blueviolet;
+    border-radius: 10px;
+
+>>>>>>> resolve
 }
 
 .productCardImage img {

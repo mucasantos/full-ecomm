@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {
     "flag": "Mais Vendidos",
     "image": "/public/image/bag-orange.webp",
@@ -90,3 +91,96 @@
     "price": "R$ 15,90"
   }
 ]
+=======
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    },
+    {
+        "flag": "Mais vendido",
+        "image": "/image/bag-orange.webp",
+        "name": "Sou um produto",
+        "price": "R$15,00"
+    }
+]
+>>>>>>> resolve
