@@ -8,6 +8,7 @@ const login = require("../../views/admin/signin");
 
 //importa o repositorio de usuário
 const userRepo = require("../../repositories/users");
+const forbidden = require("../../views/forbidden/forbidden")
 
 router.get("/cadastro", (req, res) => {
   res.send(cadastro());
@@ -48,16 +49,14 @@ router.post("/login", async (req, res) => {
   const user = await userRepo.getOneBy({ email, password });
 
   if (user) {
-   //Aplicar uma session
+    //Aplicar uma session
     //req.session (o session posso utilizar por causa do pacote cookie-session)
     //.userId => identificação criada pelo desenvolvedor
-
-   req.session.userId = user.id
-    res.send("Usuário encontrado...")
-  }else {
-    res.send("Nao autorizado.....")
+    req.session.userId = user.id;
+    res.redirect("/admin/products")
+  } else {
+    res.send(forbidden())
   }
-
 });
 
 router.get("/sair", (req, res) => {
