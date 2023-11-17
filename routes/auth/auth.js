@@ -50,10 +50,8 @@ router.post("/login", async (req, res) => {
   //Para testar tem que enviar os dados!! Alterar na view e aqui
   //Antes de atribuir, temos q consultar o BD e ver se esta tudo
   //correto!!
-
   //1 Passo - verificar se tenho e email na base!
   const user = await userRepo.getOneBy({ email });
-
   if (user) { 
     //Verificar se a senha ~e igual
     //Add o user no cookie session
@@ -62,12 +60,10 @@ router.post("/login", async (req, res) => {
       user.password,
       password
     );
-
     if (validPassword) {
      //Aplicar uma session
     //req.session (o session posso utilizar por causa do pacote cookie-session)
     //.userId => identificação criada pelo desenvolvedor
-
       req.session.userId = user.id;
       res.redirect("/admin/products");
     } else {
