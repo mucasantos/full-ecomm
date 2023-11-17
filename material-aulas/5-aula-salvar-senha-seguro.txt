@@ -1,0 +1,4 @@
+16/11
+Explicação de como fazer o hashing e salt para salvar no DB
+Exercícios para modificar algumas views
+Método de comparar senhas
