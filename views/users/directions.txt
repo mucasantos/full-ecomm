@@ -1,1 +1,6 @@
 Views do usuário
+Objetivo
+
+Ajustar a nova view de admin bem verificar as rotas
+Criar as rotas de usuario comum e mostrar o novo feed
+Testar o fluxo novo
