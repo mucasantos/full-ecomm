@@ -45,10 +45,10 @@ module.exports = ({ content }) => {
                 <!-- FAQ -->
                 <section class="faq">
                     <span class="icon">
-                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     </span>
-                    <a href="">
-                        <span>Tire suas dúvidas</span>
+                    <a href="/admin/product/new">
+                        <span>Adicionar Produto</span>
                     </a>
                 </section>
                 <!-- Search -->

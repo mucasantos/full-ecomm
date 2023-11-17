@@ -1,4 +1,4 @@
-const prodLayout = require('../../views/products/prod-layout')
+const prodLayout = require('../products/prod-layout')
 
 module.exports = ({ content: products }) => {
 //Acessa a lista de produtos recebida e ao iterar com ela, devolve

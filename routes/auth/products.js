@@ -9,15 +9,15 @@ const upload = multer({ storage: multer.memoryStorage() });
 const prodRepo = require("../../repositories/products");
 const newProduct = require("../../views/admin/products/new");
 const productRepo = require("../../repositories/products");
-const myCards = require('../../views/products/card-product')
+const myCards = require('../../views/admin/products/card-product')
 
 
 
-router.post("/products/new", (req, res) => {
+router.get("/product/new", (req, res) => {
   res.send(newProduct());
 });
 
-router.post("/products/new", upload.single("image"), async (req, res) => {
+router.post("/product/new", upload.single("image"), async (req, res) => {
   console.log(req.body);
   await prodRepo.create(req.body);
   res.send("Produto criado...");
