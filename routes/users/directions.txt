@@ -1,5 +1,6 @@
 Rotas ref ao usuario
 /
 /login
-/logout/cart
+/logout
+/cart
 /checkout
