@@ -1,0 +1,6 @@
+Aqui vao as rotas ref a adm do sistema
+/admin/products
+/admin/product/new
+/admin/login
+/admin/signup
+/admin/logout

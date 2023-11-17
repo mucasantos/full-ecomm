@@ -1,0 +1,5 @@
+Rotas ref ao usuario
+/
+/login
+/logout/cart
+/checkout
