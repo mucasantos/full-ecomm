@@ -26,9 +26,16 @@ router.get("/login", (req, res) => {
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  const user = await userRepo.getOneBy({ email, password });
+
+  //1° passo, verificar se tenho o email na base!
+
+  const user = await userRepo.getOneBy({ email });
 
   if (user) {
+
+    //verificar se a senha é igual 
+    
+    const validPassword = await userRepo.comparePassword(user.password, password)
 
     req.session.userId = user.id
     res.redirect('/admin/products')
