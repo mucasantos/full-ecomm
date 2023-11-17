@@ -25,11 +25,8 @@ router.post("/product/new", upload.single("image"), async (req, res) => {
 
 router.get("/products", async (req, res) => {
   const allprods = await productRepo.getAll();
-
   //Enviar esta lista(eu sei q eh lista!)
-
   myCards({ content: allprods });
-
   res.send(myCards({ content: allprods }));
 });
 
