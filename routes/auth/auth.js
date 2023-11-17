@@ -48,17 +48,25 @@ router.post("/login", async (req, res) => {
   //Para testar tem que enviar os dados!! Alterar na view e aqui
   //Antes de atribuir, temos q consultar o BD e ver se esta tudo
   //correto!!
-  const user = await userRepo.getOneBy({ email, password });
+  const user = await userRepo.getOneBy({ email });
+
+
 
   if (user) {
-   //Aplicar uma session
+    //Aplicar uma session
     //req.session (o session posso utilizar por causa do pacote cookie-session)
     //.userId => identificação criada pelo desenvolvedor
+    const validPassword = await userRepo.comparePassword(user.password, password)
 
-   req.session.userId = user.id
-   const allprods = await prodRepo.getAll();  // Corrigi a chamada para prodRepo.getAll()
-   res.send(cardProduct({ content: allprods }));
-  }else {
+    if (validPassword) {
+      req.session.userId = user.id
+      const allprods = await prodRepo.getAll();  // Corrigi a chamada para prodRepo.getAll()
+      res.send(cardProduct({ content: allprods}));
+    } else {
+      res.send(error403())
+    }
+
+  } else {
     res.send(error403())
   }
 

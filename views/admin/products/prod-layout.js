@@ -21,6 +21,7 @@ module.exports = ({content}) => {
   
       <!-- Icons -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://kit.fontawesome.com/524fdad106.js" crossorigin="anonymous"></script>
   
       <title>Loja de acessórios</title>
   </head>
@@ -46,6 +47,14 @@ module.exports = ({content}) => {
                           <span>Tire suas dúvidas</span>
                       </a>
                   </section>
+                  <section class="addProd faq">
+                  <span class="icon">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  </span>
+                  <a href="/admin/products/new">
+                      <span>Adicionar produtos</span>
+                  </a>
+              </section>
                   <!-- Search -->
                   <div id="search-container">
                       <section class="search">
@@ -80,12 +89,14 @@ module.exports = ({content}) => {
                               <li class="font">Sobre</li>
                               <li class="font">FAQ</li>
                               <li class="font">Contato</li>
+                              
                           </ul>
                       </a>
                   </section>
                   <div class="headerRowTwo">
                       <!-- Login -->
                       <section class="login">
+                      <a href="/admin/sair" style="margin-right:10px;">sair</a>
                           <span class="icon">
                               <i class="fa fa-user-circle" aria-hidden="true"></i>
                           </span>

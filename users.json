@@ -1,1 +1,7 @@
-[{"name":"Samuel Santos","email":"muca@email.com","password":"12345678"},{"name":"Giovanna M","email":"gi@email.com","password":"12345678"},{"email":"maria@email.com","password":"ZefD-X-tukb9RZp","passwordConfirmation":"ZefD-X-tukb9RZp"},{"email":"matheus@email.com","password":"1234","id":"c2f44f3f"},{"email":"joaocleber@email.com","password":"0987","id":"ae74662d"},{"email":"joaocleber@email.com","password":"0987","id":"cb7f715b"}]
+[
+    {
+        "email": "matheus@email.com",
+        "password": "e49dcfc0d46dcb8a38b9a433e516598401869bc06b13d5b72d679615a4c7bd93e4b586cd64b097681673f980ba77fdb3edf5e0d05974686ba2893870d3e579ec.472de971edd3238d",
+        "id": "edff35e1"
+    }
+]
