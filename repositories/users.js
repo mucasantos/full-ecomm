@@ -4,25 +4,51 @@ const crypto = require("crypto");
 
 const Repository = require("./repository");
 
+//1º Passo
+const util = require("util");
+//Transformar o crypto em Async
+const scrypt = util.promisify(crypto.scrypt);
+
 class UserRepository extends Repository {
-  apenasUser() {}
-
   async create(atributos) {
-
-    console.log(atributos)
+    console.log(atributos);
     //adicionar o id ao atributo recebido
     atributos.id = this.randomId();
+    //1.Criptografar a senha do usuário (criando a hash)
+    //Criar o Salt de forma aleatoria
+    const salt = crypto.randomBytes(8).toString("hex");
+    //2.Inserir o Hanshing
+    const hashedPassword = await scrypt(atributos.password, salt, 64);
+    //3.Salvar no BD
     //Ler o meu arquivo
     const records = await this.getAll();
+    //Atualizar o nosso objeto!
+    const record = {
+      ...atributos,
+      password: `${hashedPassword.toString("hex")}.${salt}`,
+    };
     //gravar no array records
-    records.push(atributos);
+    records.push(record);
     //devolver para o arquivo
     await this.writeAll(records);
 
-    return atributos
+    return atributos;
   }
 
-  
+  //VAmos criar um método para comparar a senha enviada pelo
+  //cliente, com a senha salva no DB.
+  //Para isso, precisaremos descriptografar a senha!
+
+  async comparePassword(savedPassword, typedPassword) {
+    // A lógica para salvar foi: Senha cripto . salt
+
+    const result = savedPassword.split(".");
+    const hashedPass = result[0];
+    const salt = result[1];
+    const hashedPassword = await scrypt(typedPassword, salt, 64);
+
+    return hashedPassword.toString("hex") == hashedPass;
+  }
 }
 
 module.exports = new UserRepository("users.json");

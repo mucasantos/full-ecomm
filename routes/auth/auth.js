@@ -8,7 +8,7 @@ const login = require("../../views/admin/signin");
 
 //importa o repositorio de usuário
 const userRepo = require("../../repositories/users");
-const forbidden = require("../../views/forbidden/forbidden")
+const forbidden = require("../../views/forbidden/forbidden");
 
 router.get("/cadastro", (req, res) => {
   res.send(cadastro());
@@ -37,6 +37,10 @@ router.post("/cadastro", async (req, res) => {
   res.send("TUDO CERTO");
 });
 
+router.get('/deu-ruim', (req, res)=>{
+  res.send(forbidden());
+})
+
 router.get("/login", (req, res) => {
   //PAra testar tem que enviar os dados!! Alterar na view e aqui
   res.send(login(req, res));
@@ -46,16 +50,31 @@ router.post("/login", async (req, res) => {
   //Para testar tem que enviar os dados!! Alterar na view e aqui
   //Antes de atribuir, temos q consultar o BD e ver se esta tudo
   //correto!!
-  const user = await userRepo.getOneBy({ email, password });
 
-  if (user) {
-    //Aplicar uma session
+  //1 Passo - verificar se tenho e email na base!
+  const user = await userRepo.getOneBy({ email });
+
+  if (user) { 
+    //Verificar se a senha ~e igual
+    //Add o user no cookie session
+    //Redireciono ele para home
+      const validPassword = await userRepo.comparePassword(
+      user.password,
+      password
+    );
+
+    if (validPassword) {
+     //Aplicar uma session
     //req.session (o session posso utilizar por causa do pacote cookie-session)
     //.userId => identificação criada pelo desenvolvedor
-    req.session.userId = user.id;
-    res.redirect("/admin/products")
+
+      req.session.userId = user.id;
+      res.redirect("/admin/products");
+    } else {
+      res.redirect('/admin/deu-ruim')
+    }
   } else {
-    res.send(forbidden())
+    res.redirect('/admin/deu-ruim')
   }
 });
 
