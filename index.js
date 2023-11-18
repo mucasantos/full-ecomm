@@ -6,6 +6,8 @@ const cookieSession = require('cookie-session')
 const authRoutes = require("./routes/auth/auth");
 const productsRoutes = require("./routes/auth/products");
 
+const userRoutes = require("./routes/users/user_routes");
+
 const validSession = require('./controller/verify_session')
 
 //user o body parser em um middleware
@@ -23,6 +25,7 @@ app.use(cookieSession({
 
 //nosso filtro q informa q toda req tem q ser /admin
 app.use("/admin", authRoutes);
+app.use( userRoutes);
 app.use("/admin", validSession, productsRoutes);
 
 app.listen(3000, () => {
