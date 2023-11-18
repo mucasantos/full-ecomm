@@ -1,0 +1,3 @@
+17/11
+Organizar rotas e arquivos separando entre o
+usuário admin e usuário comum

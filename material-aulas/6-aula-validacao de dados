@@ -1,3 +1,4 @@
 1. Utilizar validaçao com if (tam de senha, etc...)
 2. Utilizar o express-validator para validar os formulários
 3. Criar middleware para validar
+4. Criar o middleware de validação
