@@ -3,6 +3,7 @@ const layout = require('../layout');
 //Agora recebo os parametros e tenho q mudar na router tb!!
 module.exports = (req,res) => {
   return layout({
+    req,
     content: `
 
       <div class="container">

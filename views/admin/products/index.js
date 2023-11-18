@@ -1,6 +1,9 @@
 const layout = require('../../layout');
 
-module.exports = ({content: products }) => {
+module.exports = ({content: products, req }) => {
+
+
+
   const renderedProducts = products
     .map(product => {
       return `
@@ -22,7 +25,7 @@ module.exports = ({content: products }) => {
     })
     .join('');
 
-  return layout({
+  return layout({req,
     content: `
     <div class="admin container">
       <div class="control">

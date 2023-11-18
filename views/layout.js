@@ -1,4 +1,12 @@
-module.exports = ({ content }) => {
+module.exports = ({ req, content }) => {
+  var isLoggedIn;
+  if(req.session.userId ===undefined) {
+    isLoggedIn = `<a href="/admin/login"><i class="fa fa-user"></i> Login</a>`
+  }else {
+    isLoggedIn = `<a href="/admin/sair"><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Sair</a>`
+  }
+
+  
   return `
     <!DOCTYPE html>
       <html lang="en">
@@ -51,6 +59,9 @@ module.exports = ({ content }) => {
                   </div>
                   <div class="navbar-item">
                     <a href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a>
+                  </div>
+                  <div class="navbar-item">
+                    ${isLoggedIn}
                   </div>
                 </div>
               </div>

@@ -9,7 +9,7 @@ const userProdsView = require("../../views/users/index");
 router.get("/", async (req, res) => {
   const products = await productRepo.getAll();
 
-  res.send(userProdsView({ products }));
+  res.send(userProdsView({ req, products }));
 });
 
 router.get("/cadastro", (req, res) => {

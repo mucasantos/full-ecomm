@@ -1,6 +1,6 @@
 const layout = require('../layout');
 
-module.exports = ({ products }) => {
+module.exports = ({ req, products }) => {
 
   const renderedProducts = products
     .map(product => {
@@ -27,7 +27,7 @@ module.exports = ({ products }) => {
     })
     .join('\n');
 
-  return layout({
+  return layout({req,
     content: `
       <section class="banner">
         <div class="container">

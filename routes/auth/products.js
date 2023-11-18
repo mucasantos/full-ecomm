@@ -12,8 +12,6 @@ const productRepo = require("../../repositories/products");
 
 const adminProducts = require('../../views/admin/products/index')
 
-
-
 router.get("/product/new", (req, res) => {
   res.send(newProduct());
 });
@@ -28,7 +26,7 @@ router.get("/products", async (req, res) => {
   const allprods = await productRepo.getAll();
   //Enviar esta lista(eu sei q eh lista!)
   
-  res.send(adminProducts({ content: allprods }));
+  res.send(adminProducts({ content: allprods, req }));
 });
 
 module.exports = router;
