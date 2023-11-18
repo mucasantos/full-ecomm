@@ -1,4 +1,4 @@
-const layout = require("../admin/layoutError")
+const layout = require("./layoutError")
 
 module.exports = (req, res) => {
     return layout({

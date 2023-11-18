@@ -16,6 +16,9 @@ router.get("/cadastro", (req, res) => {
   res.send(cadastro());
 });
 
+router.get("/cart", (req, res) => {
+    res.send("Carrinho");
+  });
 router.post("/cadastro", async (req, res) => {
   //Forma de extrair as variáveis no ES6
   const { email, password, confirmPassword } = req.body;

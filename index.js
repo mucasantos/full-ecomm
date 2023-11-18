@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const cookieSession = require('cookie-session')
 
 const authRoutes = require("./routes/auth/auth");
+const authRoutesUser = require("./routes/auth/authUser");
 const productsRoutes = require("./routes/auth/products");
 
 const validSession = require('./controller/verify_session')
@@ -24,6 +25,9 @@ app.use(cookieSession({
 //nosso filtro q informa q toda req tem q ser /admin
 app.use("/admin", authRoutes);
 app.use("/admin", validSession, productsRoutes);
+
+app.use(authRoutesUser);
+
 
 app.listen(3000, () => {
   console.log("Server no ar...");
