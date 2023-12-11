@@ -5,7 +5,23 @@ const crypto = require("crypto");
 const Repository = require("./repository");
 
 class ProductRepository extends Repository {
-  apenasProduto(){}  
+  async create({ data, image }) {
+    console.log("product");
+    
+
+    let product = { title: data.title, price: data.price, image: image };
+    product.id = this.randomId();
+
+    const records = await this.getAll();
+    //Atualizar o nosso objeto!
+     const record = {
+       ...product,
+      };
+    //gravar no array records
+    records.push(record);
+    //devolver para o arquivo
+    await this.writeAll(records);
+  }
 }
 
 module.exports = new ProductRepository("products.json");
