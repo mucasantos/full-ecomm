@@ -1,6 +1,6 @@
 module.exports = ({ req, content }) => {
   var isLoggedIn;
-  if(req.session.userId ===undefined) {
+  if(req?.session ===undefined) {
     isLoggedIn = `<a href="/admin/login"><i class="fa fa-user"></i> Login</a>`
   }else {
     isLoggedIn = `<a href="/admin/sair"><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Sair</a>`
