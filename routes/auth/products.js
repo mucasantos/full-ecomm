@@ -18,9 +18,8 @@ router.get("/product/new", (req, res) => {
 });
 
 router.post("/product/new", upload.single("image"), async (req, res) => {
-  const data = req.body;
-
-  await prodRepo.create({ data: data, image: req.file.buffer.toString('base64') });
+  console.log(req.body);
+  await prodRepo.create(req.body);
   res.send("Produto criado...");
 });
 
