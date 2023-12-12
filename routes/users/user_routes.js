@@ -19,5 +19,11 @@ router.get("/cadastro", (req, res) => {
 router.post("/cadastro", async (req, res) => {
   res.send("TUDO CERTO");
 });
+router.get("/select/product/:id", async (req, res) => {
+const id = req.params.id
+
+//Enviar para o método responsável em fazer algo(deletar, add fav, add cart...)
+  res.send(id);
+});
 
 module.exports = router;

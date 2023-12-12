@@ -15,7 +15,7 @@ module.exports = ({ req, products }) => {
               <h5>$${product.price}</h5>
             </div>
             <footer class="card-footer">
-              <form action="/cart/products" method="POST">
+              <form action="/select/product/${product.id}" method="GET">
                 <button class="button has-icon is-inverted">
                   <i class="fa fa-shopping-cart"></i> Add to cart
                 </button>
