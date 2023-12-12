@@ -6,9 +6,7 @@ const Repository = require("./repository");
 
 class ProductRepository extends Repository {
   async create({ data, image }) {
-    console.log("product");
     
-
     let product = { title: data.title, price: data.price, image: image };
     product.id = this.randomId();
 
