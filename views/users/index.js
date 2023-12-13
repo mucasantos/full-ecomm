@@ -2,6 +2,8 @@ const layout = require('../layout');
 
 module.exports = ({ req, products }) => {
 
+ 
+
   const renderedProducts = products
     .map(product => {
       return `

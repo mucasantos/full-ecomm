@@ -1,12 +1,11 @@
 module.exports = ({ req, content }) => {
   var isLoggedIn;
-  if(req?.session ===undefined) {
-    isLoggedIn = `<a href="/admin/login"><i class="fa fa-user"></i> Login</a>`
-  }else {
-    isLoggedIn = `<a href="/admin/sair"><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Sair</a>`
+  if (req?.session === undefined) {
+    isLoggedIn = `<a href="/admin/login"><i class="fa fa-user"></i> Login</a>`;
+  } else {
+    isLoggedIn = `<a href="/admin/sair"><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Sair</a>`;
   }
 
-  
   return `
     <!DOCTYPE html>
       <html lang="en">
@@ -70,6 +69,8 @@ module.exports = ({ req, content }) => {
         </header>
 
         ${content}
+
+        
       </body>
     </html>
   `;

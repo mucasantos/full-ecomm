@@ -70,6 +70,7 @@ router.post("/login", async (req, res) => {
       res.redirect('/admin/deu-ruim')
     }
   } else {
+    req.session.showAlert = true
     res.redirect('/admin/deu-ruim')
   }
 });
