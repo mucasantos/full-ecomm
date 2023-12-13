@@ -1,20 +1,33 @@
 //importar o express
 const express = require("express");
+
+const { validationResult} = require("express-validator")
+
 //iniciar as Rotas
 const router = express.Router(); // Este R tem q ser maiusculo
-
 const cadastro = require("../../views/admin/signup");
 const login = require("../../views/admin/signin");
 
 //importa o repositorio de usuário
 const userRepo = require("../../repositories/users");
 const forbidden = require("../../views/forbidden/forbidden");
+const { requireEmail } = require("./validators");
 
 router.get("/cadastro", (req, res) => {
-  res.send(cadastro());
+  res.send(cadastro({}));
 });
 
-router.post("/cadastro", async (req, res) => {
+router.post("/cadastro",[
+  requireEmail
+], async (req, res) => {
+
+  const errors = validationResult(req)
+//Verificando se tem erros
+if(!errors.isEmpty()) {
+  return res.send(cadastro({errors}))
+}
+
+
   //Forma de extrair as variáveis no ES6
   const { email, password, confirmPassword } = req.body;
 

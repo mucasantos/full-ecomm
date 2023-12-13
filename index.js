@@ -3,8 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const cookieSession = require('cookie-session')
 
-const authRoutes = require("./routes/auth/auth");
-const productsRoutes = require("./routes/auth/products");
+const authRoutes = require("./routes/admin/auth");
+const productsRoutes = require("./routes/admin/products");
 
 const userRoutes = require("./routes/users/user_routes");
 

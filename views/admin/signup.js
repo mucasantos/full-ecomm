@@ -1,6 +1,21 @@
 const layout = require('../layout');
 
-module.exports = () => {
+module.exports = ({ errors }) => {
+
+  const getError = (errors, prop) => {
+    //prop === 'email' || 'password' || 'confirmPass'
+
+    if (errors) {
+      try {
+        return errors.mapped()[prop].msg
+
+      } catch (error) {
+        return ''
+      }
+      //erros.mapped() nos retorna o objeto do erro, e 
+      //desse objeto, pegamos o 'msg'
+    }
+  }
   return layout({
     content: `
       <div class="container">
@@ -16,6 +31,7 @@ module.exports = () => {
               <div class="field">
                 <label class="label">Password</label>
                 <input required class="input" placeholder="Password" name="password" type="password" />
+                ${getError(errors, 'email')}
                 <p class="help is-danger"></p>
               </div>
               <div class="field">
