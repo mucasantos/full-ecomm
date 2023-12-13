@@ -14,7 +14,7 @@ const forbidden = require("../../views/forbidden/forbidden");
 const { requireEmail } = require("./validators");
 
 router.get("/cadastro", (req, res) => {
-  res.send(cadastro());
+  res.send(cadastro({}));
 });
 
 router.post("/cadastro",[
@@ -22,7 +22,12 @@ router.post("/cadastro",[
 ], async (req, res) => {
 
   const errors = validationResult(req)
-  console.log(errors)
+//Verificando se tem erros
+if(!errors.isEmpty()) {
+  return res.send(cadastro({errors}))
+}
+
+
   //Forma de extrair as variáveis no ES6
   const { email, password, confirmPassword } = req.body;
 
